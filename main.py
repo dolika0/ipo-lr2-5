@@ -1,12 +1,20 @@
 #вариант 4
-print(" Дано число n в восьмеричной СС состоящие из 5 чисел. Выведите на экран значение  этого числа в десятичной системе счисления ")
-n=input("Введите число из пяти цифр: ")
-x1=int(str(n)[0])*(8**4)
-x2= int(str(n)[1])*(8**3)
-x3= int(str(n)[2])*(8**2)
-x4= int(str(n)[3])*(8**1)
-x5= int(str(n)[4])*(8**0)
-v= x1 + x2 + x3 + x4 + x5
-print(f" число {n} в восьмеричной системе равняется числу {v} в десятичной системе " ) 
-
-
+print("Дано число n в восьмеричной системе счисления ,состоящее из 5 чисел.Выведите на экран значение этого числа в десятичной системе счисления")
+n = int(input("Введите число из пяти цифр: "))
+eight_last = n % 10
+n //= 10
+ten_last = eight_last * (8**0)
+eight_prev = n % 10
+n //= 10
+ten_prev = eight_prev * (8**1)
+eight_third = n % 10
+n //= 10
+ten_third = eight_third * (8**2)
+eight_second = n % 10
+n //= 10
+ten_second = eight_second * (8**3)
+eight_first = n % 10
+n //= 10
+ten_first = eight_first * (8**4)
+summa = ten_last + ten_prev + ten_third + ten_second + ten_first
+print(f"число{n} в восьмеричной СС равняется числу {summa} в десятичной СС")
